@@ -1,0 +1,78 @@
+/* import google font 'Inter'  */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+/* reset all default  styles  */
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+img {
+  width: 100%;
+}
+
+/* common styles  */
+body {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background-color: #f5f7fb;
+  font-family: "Inter", sans-serif;
+}
+
+.container-width {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* responsive styles:: small devices  */
+@media (max-width: 767.98px) {
+  .container-width {
+    width: calc(100% - 48px);
+    padding: 0 24px;
+  }
+}
+
+/* responsive styles:: medium devices  */
+@media (min-width: 768px) and (max-width: 991.98px) {
+}
+
+/* responsive styles:: large devices  */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+}
+
+/* responsive styles:: extra large devices  */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+}
+
+/* responsive styles:: extra extra large devices  */
+@media (min-width: 1400px) {
+}
