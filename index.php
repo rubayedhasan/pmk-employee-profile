@@ -270,6 +270,41 @@
                             </div>
                             <h4 class="lh-label">Contract Info</h4>
                         </div>
+
+                        <!-- information card  -->
+                        <div class="employment-info-card">
+                            <!-- joining date  -->
+                            <div class="eic-item">
+                                <h5 class="item-label">Joining Date</h5>
+                                <p class="item-value" id="employee-joining-date">YYY-MM-DD</p>
+                            </div>
+
+                            <!-- employment confirm  -->
+                            <div class="employee-confirm">
+                                <!-- Employment Type  -->
+                                <div class="eic-item">
+                                    <h5 class="item-label">Employment Type</h5>
+                                    <p class="item-value" id="employee-type">Permanent Staff</p>
+                                </div>
+                                <!-- Confirmation Date  -->
+                                <div class="eic-item">
+                                    <h5 class="item-label">Confirmation Date</h5>
+                                    <p class="item-value" id="employee-confirmation-date">YYY-MM-DD</p>
+                                </div>
+                            </div>
+
+                            <!-- employment static info  -->
+                            <div class="employee-confirm">
+                                <div class="eic-item">
+                                    <h5 class="item-label">Employment Category</h5>
+                                    <p class="item-value">Full-Time</p>
+                                </div>
+                                <div class="eic-item">
+                                    <h5 class="item-label">Payroll Group</h5>
+                                    <p class="item-value">Monthly Payroll</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- employee Compensation details  -->
@@ -287,6 +322,40 @@
                             <h4 class="lh-label">Compensation</h4>
                         </div>
 
+                        <!-- information card  -->
+                        <div class="employment-info-card">
+                            <!-- employee salary Grade  -->
+                            <div class="eic-item">
+                                <h5 class="item-label">Salary Grade</h5>
+                                <p class="item-value" id="employee-salary-grade">Grade 20</p>
+                            </div>
+
+                            <!-- employment salary structure  -->
+                            <div class="employee-confirm">
+                                <!-- gross salary  -->
+                                <div class="eic-item">
+                                    <h5 class="item-label">Gross Salary</h5>
+                                    <p class="item-value">৳ <span id="employee-gross-salary">41200</span>/=</p>
+                                </div>
+                                <!-- basic salary  -->
+                                <div class="eic-item">
+                                    <h5 class="item-label">Basic Salary</h5>
+                                    <p class="item-value">৳ <span id="employee-basic-salary">17000</span>/=</p>
+                                </div>
+                            </div>
+
+                            <!-- employment static info  -->
+                            <div class="employee-confirm">
+                                <div class="eic-item">
+                                    <h5 class="item-label">Provident Fund</h5>
+                                    <p class="item-value">10% (post-confirmation)</p>
+                                </div>
+                                <div class="eic-item">
+                                    <h5 class="item-label">Gratuity</h5>
+                                    <p class="item-value">Eligible (5+ yrs)</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 

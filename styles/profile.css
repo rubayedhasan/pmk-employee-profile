@@ -134,7 +134,9 @@ body {
   justify-content: flex-start;
   gap: 8px;
   padding: 12px 18px;
+  padding-left: 0;
   border-bottom: 1px solid rgba(11, 30, 61, 0.1);
+  margin-bottom: 24px;
 }
 
 .lh-label-icon {
@@ -293,7 +295,7 @@ body {
   padding: 24px;
   background-color: #f4f0ea;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 4px;
+  border-radius: 8px;
 }
 
 .breadcrumb {
@@ -353,16 +355,59 @@ body {
   gap: 24px;
 }
 
-/* .employee-contract-layout {
+.employment-info-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
 }
 
-.employee-compensation-layout {
-} */
+.employee-confirm {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.eic-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.item-label {
+  color: #9ca3afd5;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.item-value {
+  color: #131313;
+  font-size: 0.925rem;
+  font-weight: 400;
+}
 
 /* responsive styles:: small devices  */
 @media (max-width: 767.98px) {
   .container-width {
     width: calc(100% - 48px);
+  }
+
+  /* group styles  */
+
+  .layout-heading {
+    padding: 8px 0px 16px;
+  }
+
+  .lh-label-icon {
+    padding: 6px;
+  }
+
+  .lh-label-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .lh-label {
+    font-size: 0.95rem;
   }
 
   /* employee profile layout section's styles  */
@@ -384,6 +429,24 @@ body {
 
   .print-button {
     display: none;
+  }
+
+  /* employment information container styles  */
+  .employment-info-container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0;
+  }
+
+  .employee-confirm {
+    gap: 12px;
+  }
+
+  .item-label {
+    font-size: 0.75rem;
+  }
+
+  .item-value {
+    font-size: 0.875rem;
   }
 }
 
@@ -455,6 +518,12 @@ body {
   .print-button {
     padding: 10px 14px;
   }
+
+  /* employment information container styles  */
+  .employment-info-container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0;
+  }
 }
 
 /* responsive styles:: large devices  */
@@ -475,6 +544,12 @@ body {
   #profile-picture::after {
     width: 150px;
     height: 150px;
+  }
+
+  /* employment information container styles  */
+  .employment-info-container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0;
   }
 }
 
