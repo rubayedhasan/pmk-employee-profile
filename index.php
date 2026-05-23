@@ -372,6 +372,53 @@
                         </div>
                         <h4 class="lh-label">Transfer Log</h4>
                     </div>
+
+                    <!-- employee transfer log ( each row has 5 cols (100px and 1fr(4times))) -->
+                    <div class="employee-transfer-log">
+                        <div class="transfer-log-heading">
+                            <div class="log-head">SL</div>
+                            <div class="log-head">Effective Date</div>
+                            <div class="log-head">From Branch</div>
+                            <div class="log-head">To Branch</div>
+                            <div class="log-head">Remakes</div>
+                        </div>
+
+                        <!-- transfer body ( each row has 5 cols (100px and 1fr(4times))) -->
+                        <div class="transfer-log-body">
+                            <!-- 1st row -->
+                            <div class="log-row">
+                                <div class="log-col employee-transfer-sl">01</div>
+                                <div class="log-col" id="employee-transfer-effective-date">YYYY-MM-DD</div>
+                                <div class="log-col" id="employee-transfer-from-branch">Zirabo(001)</div>
+                                <div class="log-col" id="employee-transfer-to-branch">Zirani(002)</div>
+                                <div class="log-col" id="employee-transfer-remark">
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab facere ut modi repellendus quam odio!
+                                </div>
+                            </div>
+
+                            <!-- 2nd row -->
+                            <div class="log-row">
+                                <div class="log-col employee-transfer-sl">02</div>
+                                <div class="log-col" id="employee-transfer-effective-date">YYYY-MM-DD</div>
+                                <div class="log-col" id="employee-transfer-from-branch">Zirabo(001)</div>
+                                <div class="log-col" id="employee-transfer-to-branch">Zirani(002)</div>
+                                <div class="log-col" id="employee-transfer-remark">
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab facere ut modi repellendus quam odio!
+                                </div>
+                            </div>
+
+                            <!-- 3rd row -->
+                            <div class="log-row">
+                                <div class="log-col employee-transfer-sl">03</div>
+                                <div class="log-col" id="employee-transfer-effective-date">YYYY-MM-DD</div>
+                                <div class="log-col" id="employee-transfer-from-branch">Zirabo(001)</div>
+                                <div class="log-col" id="employee-transfer-to-branch">Zirani(002)</div>
+                                <div class="log-col" id="employee-transfer-remark">
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab facere ut modi repellendus quam odio!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- employee promotion details  -->
