@@ -101,7 +101,7 @@
                         <!-- mobile  -->
                         <div class="contact-info-row">
                             <div class="ci-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-phone-call">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-phone-call">
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                     <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
                                     <path d="M15 7a2 2 0 0 1 2 2" />
@@ -117,7 +117,7 @@
                         <!-- email  -->
                         <div class="contact-info-row">
                             <div class="ci-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-mail">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-mail">
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                     <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10" />
                                     <path d="M3 7l9 6l9 -6" />
@@ -132,7 +132,7 @@
                         <!-- present address  -->
                         <div class="contact-info-row">
                             <div class="ci-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-map-pin">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-map-pin">
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                     <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
                                     <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0" />
@@ -149,7 +149,7 @@
                         <!-- permanent address  -->
                         <div class="contact-info-row">
                             <div class="ci-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-map-pin">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-map-pin">
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                     <path d="M18.364 4.636a9 9 0 0 1 .203 12.519l-.203 .21l-4.243 4.242a3 3 0 0 1 -4.097 .135l-.144 -.135l-4.244 -4.243a9 9 0 0 1 12.728 -12.728zm-6.364 3.364a3 3 0 1 0 0 6a3 3 0 0 0 0 -6" />
                                 </svg>
@@ -221,7 +221,34 @@
 
             <!-- profile main content container  -->
             <div id="profile-main">
-                main content
+                <!-- navigation topbar  -->
+                <div class="topbar">
+                    <!-- breadcrumb  -->
+                    <div class="breadcrumb">
+                        <span>HRM</span>
+                        <span class="bread-sep">/</span>
+                        <span>Manage Employee</span>
+                        <span class="bread-sep">/</span>
+                        <span>Employee</span>
+                        <span class="bread-sep">/</span>
+                        <span>Employee Name</span>
+                    </div>
+
+                    <!-- topbar-action  -->
+                    <div class="topbar-action">
+                        <button onclick="window.print()" type="button" class="print-button">
+                            <span class="pb-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-printer">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path d="M17 17h2a2 2 0 0 0 2 -2v-4a2 2 0 0 0 -2 -2h-14a2 2 0 0 0 -2 2v4a2 2 0 0 0 2 2h2" />
+                                    <path d="M17 9v-4a2 2 0 0 0 -2 -2h-6a2 2 0 0 0 -2 2v4" />
+                                    <path d="M7 15a2 2 0 0 1 2 -2h6a2 2 0 0 1 2 2v4a2 2 0 0 1 -2 2h-6a2 2 0 0 1 -2 -2l0 -4" />
+                                </svg>
+                            </span>
+                            <div class="pb-label">Print</div>
+                        </button>
+                    </div>
+                </div>
             </div>
         </section>
     </main>

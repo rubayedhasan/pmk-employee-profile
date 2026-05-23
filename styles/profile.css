@@ -34,6 +34,7 @@ li {
 button {
   border: none;
   outline: none;
+  cursor: pointer;
 }
 
 img {
@@ -230,11 +231,78 @@ body {
 
 /* profile main content section's styles  */
 #profile-main {
-  height: auto;
   width: 100%;
-  background-color: #fff;
+  height: auto;
   padding: 16px;
-  border: 1px solid green;
+  background-color: #fff;
+  border-radius: 4px;
+  position: relative;
+}
+
+/* topbar  */
+.topbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px;
+  background-color: #f4f0ea;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.breadcrumb {
+  color: #64748b;
+  font-size: 0.8rem;
+  font-weight: 500;
+
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.bread-sep {
+  opacity: 0.5;
+}
+
+.print-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+
+  color: #e8c97a;
+  background-color: #0b1e3d;
+  padding: 8px 16px;
+  border: 1px solid #0b1e3d;
+  border-radius: 8px;
+
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+
+  transition: all 0.35s ease;
+}
+
+.print-button:hover {
+  background-color: #16315c;
+  border-color: #16315c;
+  color: #f5d98f;
+}
+
+.print-button .pb-icon {
+  display: flex;
+  align-items: center;
+}
+
+.print-button .pb-icon svg {
+  width: 16px;
+  height: 16px;
 }
 
 /* responsive styles:: small devices  */
@@ -246,6 +314,22 @@ body {
   /* employee profile layout section's styles  */
   #employee-profile-layout {
     grid-template-columns: 1fr;
+  }
+
+  /* topbar  */
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+  }
+
+  .breadcrumb {
+    color: #64748b;
+    font-size: 0.775rem;
+  }
+
+  .print-button {
+    display: none;
   }
 }
 
@@ -295,6 +379,11 @@ body {
   .ci-value {
     font-size: 0.75rem;
   }
+
+  .breadcrumb {
+    color: #64748b;
+    font-size: 0.65rem;
+  }
 }
 
 /* responsive styles:: medium devices  */
@@ -302,6 +391,15 @@ body {
   /* employee profile layout section's styles  */
   #employee-profile-layout {
     grid-template-columns: 1fr;
+  }
+
+  /* topbar  */
+  .topbar {
+    padding: 16px;
+  }
+
+  .print-button {
+    padding: 10px 14px;
   }
 }
 
