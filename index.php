@@ -35,6 +35,7 @@
                 <!-- employee personal information  -->
                 <div class="employee-personal-info-container">
                     <h3 class="container-label">Personal Info</h3>
+
                     <div class="sidebar-card">
                         <!-- father name  -->
                         <div class="info-row">
@@ -140,10 +141,7 @@
                             <div class="c-info">
                                 <h5 class="ci-label">Present Address</h5>
                                 <p class="ci-value" id="employee-present-address">
-                                    <span id="employee-present-upazila">Upazila</span>,
-                                    <span id="employee-present-district">District</span>,
-                                    <span id="employee-present-division">Division</span>-
-                                    <span id="employee-present-postal-code">Postal Code</span>
+                                    <span id="employee-present-upazila">Upazila</span>,<span id="employee-present-district">District</span>,<span id="employee-present-division">Division</span>-<span id="employee-present-postal-code">Postal Code</span>
                                 </p>
                             </div>
                         </div>
@@ -159,10 +157,7 @@
                             <div class="c-info">
                                 <h5 class="ci-label">Permanent Address</h5>
                                 <p class="ci-value" id="employee-permanent-address">
-                                    <span id="employee-permanent-upazila">Upazila</span>,
-                                    <span id="employee-permanent-district">District</span>,
-                                    <span id="employee-permanent-division">Division</span>-
-                                    <span id="employee-permanent-postal-code">Postal Code</span>
+                                    <span id="employee-permanent-upazila">Upazila</span>,<span id="employee-permanent-district">District</span>,<span id="employee-permanent-division">Division</span>-<span id="employee-permanent-postal-code">Postal Code</span>
                                 </p>
                             </div>
                         </div>
@@ -222,7 +217,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
             </div>
 
             <!-- profile main content container  -->
