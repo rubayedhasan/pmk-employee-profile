@@ -385,15 +385,17 @@ body {
   font-weight: 400;
 }
 
-/* employee transfer log  */
-.employee-transfer-details-container .layout-heading {
+/* employee actions(transfer,promotion,increment) log  */
+.employee-transfer-details-container .layout-heading,
+.employee-promotion-details-container .layout-heading {
   margin-bottom: 0;
   padding-bottom: 22px;
 }
 
-.transfer-log-heading {
+.transfer-log-heading,
+.promotion-log-heading,
+.increment-log-heading {
   display: grid;
-  grid-template-columns: 100px repeat(4, 1fr);
   gap: 16px;
 
   padding: 16px;
@@ -401,21 +403,49 @@ body {
   border-bottom: 1px solid rgba(11, 30, 61, 0.1);
 }
 
+.transfer-log-heading {
+  grid-template-columns: 100px repeat(4, 1fr);
+}
+
+.increment-log-heading {
+  grid-template-columns: 100px repeat(5, 1fr);
+}
+
+.promotion-log-heading {
+  grid-template-columns: repeat(6, 1fr);
+}
+
 .log-head {
+  width: 100%;
   color: #8a90a8;
   font-size: 0.75rem;
   font-weight: 500;
   text-align: left;
   text-transform: uppercase;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .log-row {
   display: grid;
-  grid-template-columns: 100px repeat(4, 1fr);
   gap: 16px;
 
   padding: 18px 12px;
   transition: all 0.35s ease;
+}
+
+.transfer-log-body .log-row {
+  grid-template-columns: 100px repeat(4, 1fr);
+}
+
+.increment-log-body .log-row {
+  grid-template-columns: 100px repeat(5, 1fr);
+}
+
+.promotion-log-body .log-row {
+  grid-template-columns: repeat(6, 1fr);
 }
 
 .log-row:not(:last-child) {
@@ -432,6 +462,8 @@ body {
   font-weight: 500;
   display: flex;
   align-items: center;
+  justify-content: flex-start;
+  width: 100%;
 }
 
 /* responsive styles:: small devices  */
@@ -496,6 +528,48 @@ body {
 
   .item-value {
     font-size: 0.875rem;
+  }
+
+  /* employee transfer log  */
+  .employee-transfer-details-container .layout-heading {
+    margin-bottom: 0;
+    padding-bottom: 22px;
+  }
+
+  .transfer-log-heading {
+    display: grid;
+    grid-template-columns: 50px repeat(4, 1fr);
+    gap: 16px;
+
+    padding: 16px;
+    background-color: #f4f0ea;
+    border-bottom: 1px solid rgba(11, 30, 61, 0.1);
+    overflow-x: scroll;
+  }
+
+  .log-head {
+    color: #8a90a8;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  .log-row {
+    display: grid;
+    grid-template-columns: 50px repeat(4, 1fr);
+    gap: 16px;
+
+    padding: 18px 12px;
+    transition: all 0.35s ease;
+  }
+
+  .log-col {
+    color: #1a1a2e;
+    font-size: 0.825rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
   }
 }
 
