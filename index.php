@@ -14,7 +14,30 @@
 
 <body>
     <main class="container-width">
-        <p>Profile</p>
+        <!-- section:: profile layout container  -->
+        <section id="employee-profile-layout">
+            <!-- profile sidebar container  -->
+            <div id="profile-aside-sidebar">
+                <!-- profile picture  -->
+                <div class="profile-picture-container">
+                    <figure id="profile-picture">
+                        <img src="./assets/images/profile_picture_no_bg.png" alt="profile picture" id="profile">
+                    </figure>
+                    <div class="profile-content">
+                        <h3 id="employee-name">Employee Name</h3>
+                        <p class="employee-desk">
+                            <span id="employee-designation">Program Manage</span> · <span id="employee-department">Program</span>
+                        </p>
+                        <h5 id="employee-id">Employee Id</h5>
+                    </div>
+                </div>
+            </div>
+
+            <!-- profile main content container  -->
+            <div id="profile-main">
+                main content
+            </div>
+        </section>
     </main>
 
 
