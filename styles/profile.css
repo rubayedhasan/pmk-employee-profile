@@ -55,7 +55,7 @@ body {
 
 /* employee profile layout section's styles  */
 #employee-profile-layout {
-  margin-top: 56px;
+  margin: 56px 0;
   display: grid;
   grid-template-columns: 320px 1fr;
   gap: 48px;
@@ -67,12 +67,17 @@ body {
   height: auto;
 }
 
-.profile-picture-container {
+/* container group  */
+.profile-picture-container,
+.employee-personal-info-container,
+.employee-contact-info-container,
+.employee-posting-container {
   padding: 16px;
   background-color: #fff;
   border-radius: 4px;
 }
 
+/* profile picture */
 #profile-picture {
   width: 280px;
   height: 280px;
@@ -141,6 +146,86 @@ body {
   border: 1px solid #2563eb;
   padding: 6px 12px;
   border-radius: 24px;
+}
+
+/* information container  */
+.employee-personal-info-container,
+.employee-contact-info-container,
+.employee-posting-container {
+  margin-top: 24px;
+}
+
+.container-label {
+  color: #64748baf;
+  font-size: 1.05rem;
+  font-weight: 600;
+  font-style: italic;
+  text-transform: capitalize;
+}
+
+.sidebar-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 16px;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.info-row:not(:last-child) {
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.ir-label {
+  color: #9ca3af;
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.ir-value {
+  color: #131313;
+  font-size: 0.9rem;
+  font-weight: 300;
+  letter-spacing: 0.2px;
+}
+
+.contact-info-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.contact-info-row:not(:last-child) {
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.ci-icon svg {
+  width: 20px;
+  height: 20px;
+  font-size: bold;
+  color: #64748bde;
+}
+
+.ci-label {
+  color: #64748bde;
+  font-size: 0.825rem;
+  font-weight: 600;
+}
+
+.ci-value {
+  color: #131313;
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin-top: 4px;
 }
 
 /* profile main content section's styles  */
