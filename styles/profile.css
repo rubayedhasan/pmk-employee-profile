@@ -386,16 +386,28 @@ body {
 }
 
 /* employee actions(transfer,promotion,increment) log  */
+.employee-transfer-details-container,
+.employee-increment-details-container,
+.employee-promotion-details-container,
+.employee-disciplinary-action-container {
+  overflow: hidden;
+}
+
 .employee-transfer-details-container .layout-heading,
-.employee-promotion-details-container .layout-heading {
+.employee-increment-details-container .layout-heading,
+.employee-promotion-details-container .layout-heading,
+.employee-disciplinary-action-container .layout-heading {
   margin-bottom: 0;
   padding-bottom: 22px;
 }
 
 .transfer-log-heading,
 .promotion-log-heading,
-.increment-log-heading {
-  display: grid;
+.increment-log-heading,
+.discipline-log-heading {
+  /* display: grid; */
+  display: flex;
+  align-items: center;
   gap: 16px;
 
   padding: 16px;
@@ -403,7 +415,7 @@ body {
   border-bottom: 1px solid rgba(11, 30, 61, 0.1);
 }
 
-.transfer-log-heading {
+/* .transfer-log-heading {
   grid-template-columns: 100px repeat(4, 1fr);
 }
 
@@ -415,8 +427,12 @@ body {
   grid-template-columns: repeat(6, 1fr);
 }
 
+.discipline-log-heading {
+  grid-template-columns: 100px repeat(5, 1fr);
+} */
+
 .log-head {
-  width: 100%;
+  flex: 1;
   color: #8a90a8;
   font-size: 0.75rem;
   font-weight: 500;
@@ -429,14 +445,16 @@ body {
 }
 
 .log-row {
-  display: grid;
+  /* display: grid; */
+  display: flex;
+  align-items: center;
   gap: 16px;
 
   padding: 18px 12px;
   transition: all 0.35s ease;
 }
 
-.transfer-log-body .log-row {
+/* .transfer-log-body .log-row {
   grid-template-columns: 100px repeat(4, 1fr);
 }
 
@@ -448,6 +466,10 @@ body {
   grid-template-columns: repeat(6, 1fr);
 }
 
+.discipline-log-body .log-row {
+  grid-template-columns: 100px repeat(5, 1fr);
+} */
+
 .log-row:not(:last-child) {
   border-bottom: 1px solid rgba(11, 30, 61, 0.1);
 }
@@ -457,13 +479,13 @@ body {
 }
 
 .log-col {
+  flex: 1;
   color: #1a1a2e;
   font-size: 0.825rem;
   font-weight: 500;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  width: 100%;
 }
 
 /* responsive styles:: small devices  */

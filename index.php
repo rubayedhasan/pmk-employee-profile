@@ -659,6 +659,96 @@
                         <h4 class="lh-label">Disciplinary Action Register
                         </h4>
                     </div>
+
+                    <!-- Disciplinary Log Heading -->
+                    <div class="discipline-log-heading">
+                        <div class="log-head">SL</div>
+                        <div class="log-head">Notice Date</div>
+                        <div class="log-head">Action Type</div>
+                        <div class="log-head">Details</div>
+                        <div class="log-head">Recommendation</div>
+                        <div class="log-head">Work Station</div>
+                    </div>
+
+                    <!-- Disciplinary Log Body -->
+                    <div class="discipline-log-body">
+
+                        <!-- 1st Row -->
+                        <div class="log-row">
+                            <div class="log-col discipline-sl" data-label="SL">01</div>
+
+                            <div class="log-col discipline-notice-date" data-label="Notice Date">
+                                YYYY-MM-DD
+                            </div>
+
+                            <div class="log-col discipline-action-type" data-label="Action Type">
+                                Warning
+                            </div>
+
+                            <div class="log-col discipline-action-details" data-label="Details">
+                                Late attendance and failure to follow office timing regularly.
+                            </div>
+
+                            <div class="log-col discipline-recommendation" data-label="Recommendation">
+                                Maintain punctuality strictly.
+                            </div>
+
+                            <div class="log-col discipline-workstation" data-label="Work Station">
+                                Zirabo Branch
+                            </div>
+                        </div>
+
+                        <!-- 2nd Row -->
+                        <div class="log-row">
+                            <div class="log-col discipline-sl" data-label="SL">02</div>
+
+                            <div class="log-col discipline-notice-date" data-label="Notice Date">
+                                YYYY-MM-DD
+                            </div>
+
+                            <div class="log-col discipline-action-type" data-label="Action Type">
+                                Show Cause
+                            </div>
+
+                            <div class="log-col discipline-action-details" data-label="Details">
+                                Unauthorized leave without prior approval from management.
+                            </div>
+
+                            <div class="log-col discipline-recommendation" data-label="Recommendation">
+                                Submit written explanation within 3 working days.
+                            </div>
+
+                            <div class="log-col discipline-workstation" data-label="Work Station">
+                                Zirani Branch
+                            </div>
+                        </div>
+
+                        <!-- 3rd Row -->
+                        <div class="log-row">
+                            <div class="log-col discipline-sl" data-label="SL">03</div>
+
+                            <div class="log-col discipline-notice-date" data-label="Notice Date">
+                                YYYY-MM-DD
+                            </div>
+
+                            <div class="log-col discipline-action-type" data-label="Action Type">
+                                Suspension
+                            </div>
+
+                            <div class="log-col discipline-action-details" data-label="Details">
+                                Violation of company operational policy and misconduct.
+                            </div>
+
+                            <div class="log-col discipline-recommendation" data-label="Recommendation">
+                                Pending investigation by HR department.
+                            </div>
+
+                            <div class="log-col discipline-workstation" data-label="Work Station">
+                                Head Office
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </section>
