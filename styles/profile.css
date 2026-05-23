@@ -54,6 +54,112 @@ body {
   margin: 0 auto;
 }
 
+/*  group  styles*/
+/* information container  */
+.profile-picture-container,
+.employee-personal-info-container,
+.employee-contact-info-container,
+.employee-posting-container,
+.employee-contract-layout,
+.employee-compensation-layout,
+.employee-transfer-details-container,
+.employee-promotion-details-container,
+.employee-increment-details-container,
+.employee-disciplinary-action-container {
+  padding: 16px;
+  margin-top: 24px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.profile-picture-container {
+  margin-top: 0;
+}
+
+.employee-contract-layout,
+.employee-compensation-layout,
+.employee-transfer-details-container,
+.employee-promotion-details-container,
+.employee-increment-details-container,
+.employee-disciplinary-action-container {
+  padding: 24px;
+  border-radius: 14px;
+}
+
+/* group label and row styles  */
+.container-label {
+  color: #64748baf;
+  font-size: 1.05rem;
+  font-weight: 600;
+  font-style: italic;
+  text-transform: capitalize;
+}
+
+.sidebar-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 16px;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.info-row:not(:last-child) {
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.ir-label {
+  color: #9ca3af;
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.ir-value {
+  color: #131313;
+  font-size: 0.9rem;
+  font-weight: 300;
+  letter-spacing: 0.2px;
+}
+
+/* group main layout heading styles  */
+.layout-heading {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  padding: 12px 18px;
+  border-bottom: 1px solid rgba(11, 30, 61, 0.1);
+}
+
+.lh-label-icon {
+  padding: 6px 8px;
+  background-color: #0b1e3d;
+  border-radius: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lh-label-icon svg {
+  width: 24px;
+  height: 24px;
+  color: #e8c97a;
+}
+
+.lh-label {
+  color: #1a1a2e;
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
 /* employee profile layout section's styles  */
 #employee-profile-layout {
   margin: 56px 0;
@@ -66,16 +172,6 @@ body {
 #profile-aside-sidebar {
   width: 100%;
   height: auto;
-}
-
-/* container group  */
-.profile-picture-container,
-.employee-personal-info-container,
-.employee-contact-info-container,
-.employee-posting-container {
-  padding: 16px;
-  background-color: #fff;
-  border-radius: 4px;
 }
 
 /* profile picture */
@@ -149,53 +245,7 @@ body {
   border-radius: 24px;
 }
 
-/* information container  */
-.employee-personal-info-container,
-.employee-contact-info-container,
-.employee-posting-container {
-  margin-top: 24px;
-}
-
-.container-label {
-  color: #64748baf;
-  font-size: 1.05rem;
-  font-weight: 600;
-  font-style: italic;
-  text-transform: capitalize;
-}
-
-.sidebar-card {
-  display: grid;
-  grid-template-columns: 1fr;
-  margin-top: 16px;
-}
-
-.info-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 12px;
-}
-
-.info-row:not(:last-child) {
-  padding-bottom: 8px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-}
-
-.ir-label {
-  color: #9ca3af;
-  font-size: 0.9rem;
-  font-weight: 500;
-  font-style: italic;
-}
-
-.ir-value {
-  color: #131313;
-  font-size: 0.9rem;
-  font-weight: 300;
-  letter-spacing: 0.2px;
-}
-
+/* contact info  */
 .contact-info-row {
   display: flex;
   align-items: flex-start;
@@ -233,27 +283,17 @@ body {
 #profile-main {
   width: 100%;
   height: auto;
-  padding: 16px;
-  background-color: #fff;
-  border-radius: 4px;
-  position: relative;
 }
 
 /* topbar  */
 .topbar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 24px;
   background-color: #f4f0ea;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
+  border-radius: 4px;
 }
 
 .breadcrumb {
@@ -304,6 +344,20 @@ body {
   width: 16px;
   height: 16px;
 }
+
+/* employment information container styles  */
+.employment-info-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: flex-start;
+  gap: 24px;
+}
+
+/* .employee-contract-layout {
+}
+
+.employee-compensation-layout {
+} */
 
 /* responsive styles:: small devices  */
 @media (max-width: 767.98px) {
