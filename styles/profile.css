@@ -285,6 +285,7 @@ body {
 #profile-main {
   width: 100%;
   height: auto;
+  overflow: hidden;
 }
 
 /* topbar  */
@@ -337,6 +338,11 @@ body {
   color: #f5d98f;
 }
 
+.back-button {
+  color: #0b1e3d;
+  background-color: transparent;
+}
+
 .print-button .pb-icon {
   display: flex;
   align-items: center;
@@ -386,13 +392,6 @@ body {
 }
 
 /* employee actions(transfer,promotion,increment) log  */
-.employee-transfer-details-container,
-.employee-increment-details-container,
-.employee-promotion-details-container,
-.employee-disciplinary-action-container {
-  overflow: hidden;
-}
-
 .employee-transfer-details-container .layout-heading,
 .employee-increment-details-container .layout-heading,
 .employee-promotion-details-container .layout-heading,
@@ -401,91 +400,42 @@ body {
   padding-bottom: 22px;
 }
 
-.transfer-log-heading,
-.promotion-log-heading,
-.increment-log-heading,
-.discipline-log-heading {
-  /* display: grid; */
-  display: flex;
-  align-items: center;
-  gap: 16px;
+/* log table  */
+.table-log {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12.5px;
+}
 
-  padding: 16px;
+.table-log thead {
   background-color: #f4f0ea;
   border-bottom: 1px solid rgba(11, 30, 61, 0.1);
 }
 
-/* .transfer-log-heading {
-  grid-template-columns: 100px repeat(4, 1fr);
-}
-
-.increment-log-heading {
-  grid-template-columns: 100px repeat(5, 1fr);
-}
-
-.promotion-log-heading {
-  grid-template-columns: repeat(6, 1fr);
-}
-
-.discipline-log-heading {
-  grid-template-columns: 100px repeat(5, 1fr);
-} */
-
-.log-head {
-  flex: 1;
+.table-log th {
+  padding: 16px;
   color: #8a90a8;
   font-size: 0.75rem;
   font-weight: 500;
   text-align: left;
   text-transform: uppercase;
-
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
 }
 
-.log-row {
-  /* display: grid; */
-  display: flex;
-  align-items: center;
-  gap: 16px;
-
-  padding: 18px 12px;
-  transition: all 0.35s ease;
-}
-
-/* .transfer-log-body .log-row {
-  grid-template-columns: 100px repeat(4, 1fr);
-}
-
-.increment-log-body .log-row {
-  grid-template-columns: 100px repeat(5, 1fr);
-}
-
-.promotion-log-body .log-row {
-  grid-template-columns: repeat(6, 1fr);
-}
-
-.discipline-log-body .log-row {
-  grid-template-columns: 100px repeat(5, 1fr);
-} */
-
-.log-row:not(:last-child) {
-  border-bottom: 1px solid rgba(11, 30, 61, 0.1);
-}
-
-.log-row:hover {
-  background-color: #f4f0ea;
-}
-
-.log-col {
-  flex: 1;
+.table-log td {
+  padding: 16px;
   color: #1a1a2e;
   font-size: 0.825rem;
   font-weight: 500;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  border-bottom: 1px solid rgba(11, 30, 61, 0.1);
+  vertical-align: middle;
+}
+
+.table-log tr:last-child td {
+  border-bottom: none;
+}
+
+.table-log tbody tr:hover td {
+  background-color: #f4f0ea;
 }
 
 /* responsive styles:: small devices  */
@@ -552,46 +502,8 @@ body {
     font-size: 0.875rem;
   }
 
-  /* employee transfer log  */
-  .employee-transfer-details-container .layout-heading {
-    margin-bottom: 0;
-    padding-bottom: 22px;
-  }
-
-  .transfer-log-heading {
-    display: grid;
-    grid-template-columns: 50px repeat(4, 1fr);
-    gap: 16px;
-
-    padding: 16px;
-    background-color: #f4f0ea;
-    border-bottom: 1px solid rgba(11, 30, 61, 0.1);
-    overflow-x: scroll;
-  }
-
-  .log-head {
-    color: #8a90a8;
-    font-size: 0.75rem;
-    font-weight: 500;
-    text-align: left;
-    text-transform: uppercase;
-  }
-
-  .log-row {
-    display: grid;
-    grid-template-columns: 50px repeat(4, 1fr);
-    gap: 16px;
-
-    padding: 18px 12px;
-    transition: all 0.35s ease;
-  }
-
-  .log-col {
-    color: #1a1a2e;
-    font-size: 0.825rem;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
+  .table-wrapper {
+    overflow-x: auto;
   }
 }
 
@@ -669,6 +581,10 @@ body {
     grid-template-columns: repeat(1, 1fr);
     gap: 0;
   }
+
+  .table-wrapper {
+    overflow-x: auto;
+  }
 }
 
 /* responsive styles:: large devices  */
@@ -696,10 +612,17 @@ body {
     grid-template-columns: repeat(1, 1fr);
     gap: 0;
   }
+
+  .table-wrapper {
+    overflow-x: auto;
+  }
 }
 
 /* responsive styles:: extra large devices  */
 @media (min-width: 1200px) and (max-width: 1399.98px) {
+  .table-wrapper {
+    overflow-x: auto;
+  }
 }
 
 /* responsive styles:: extra extra large devices  */

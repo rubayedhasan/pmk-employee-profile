@@ -236,6 +236,7 @@
 
                     <!-- topbar-action  -->
                     <div class="topbar-action">
+                        <!-- print button  -->
                         <button onclick="window.print()" type="button" class="print-button">
                             <span class="pb-icon">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-printer">
@@ -246,6 +247,19 @@
                                 </svg>
                             </span>
                             <div class="pb-label">Print</div>
+                        </button>
+
+                        <!-- back button  -->
+                        <button onclick="window.location.href='../'" type="button" class="print-button back-button">
+                            <span class="pb-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-narrow-left-dashed">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path d="M5 12h6m3 0h1.5m3 0h.5" />
+                                    <path d="M5 12l4 4" />
+                                    <path d="M5 12l4 -4" />
+                                </svg>
+                            </span>
+                            <div class="pb-label">Back</div>
                         </button>
                     </div>
                 </div>
@@ -373,50 +387,36 @@
                         <h4 class="lh-label">Transfer Log</h4>
                     </div>
 
-                    <!-- employee transfer log ( each row has 5 cols (100px and 1fr(4times))) -->
+                    <!-- employee transfer log ( each row has 5 cols) -->
                     <div class="employee-transfer-log">
-                        <div class="transfer-log-heading">
-                            <div class="log-head">SL</div>
-                            <div class="log-head">Effective Date</div>
-                            <div class="log-head">From Branch</div>
-                            <div class="log-head">To Branch</div>
-                            <div class="log-head">Remakes</div>
-                        </div>
-
-                        <!-- transfer body ( each row has 5 cols (100px and 1fr(4times))) -->
-                        <div class="transfer-log-body">
-                            <!-- 1st row -->
-                            <div class="log-row">
-                                <div class="log-col employee-transfer-sl" data-label="SL">01</div>
-                                <div class="log-col employee-transfer-effective-date" data-label="Effective Date">YYYY-MM-DD</div>
-                                <div class="log-col employee-transfer-from-branch" data-label="From Branch">Zirabo(001)</div>
-                                <div class="log-col employee-transfer-to-branch" data-label="To Branch">Zirani(002)</div>
-                                <div class="log-col employee-transfer-remark" data-label="Remark">
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab facere ut modi repellendus quam odio!
-                                </div>
-                            </div>
-
-                            <!-- 2nd row -->
-                            <div class="log-row">
-                                <div class="log-col employee-transfer-sl" data-label="SL">01</div>
-                                <div class="log-col employee-transfer-effective-date" data-label="Effective Date">YYYY-MM-DD</div>
-                                <div class="log-col employee-transfer-from-branch" data-label="From Branch">Zirabo(001)</div>
-                                <div class="log-col employee-transfer-to-branch" data-label="To Branch">Zirani(002)</div>
-                                <div class="log-col employee-transfer-remark" data-label="Remark">
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab facere ut modi repellendus quam odio!
-                                </div>
-                            </div>
-
-                            <!-- 3rd row -->
-                            <div class="log-row">
-                                <div class="log-col employee-transfer-sl" data-label="SL">01</div>
-                                <div class="log-col employee-transfer-effective-date" data-label="Effective Date">YYYY-MM-DD</div>
-                                <div class="log-col employee-transfer-from-branch" data-label="From Branch">Zirabo(001)</div>
-                                <div class="log-col employee-transfer-to-branch" data-label="To Branch">Zirani(002)</div>
-                                <div class="log-col employee-transfer-remark" data-label="Remark">
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab facere ut modi repellendus quam odio!
-                                </div>
-                            </div>
+                        <div class="table-wrapper">
+                            <table class="table-log">
+                                <thead>
+                                    <tr>
+                                        <th>SL</th>
+                                        <th>Effective Date</th>
+                                        <th>From Branch</th>
+                                        <th>To Branch</th>
+                                        <th>Remakes</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td data-label="sl">01</td>
+                                        <td data-label="Effective Date">YYYY-MM-DD</td>
+                                        <td data-label="From Branch">Zirabo(001)</td>
+                                        <td data-label="To Branch">Zirani(002)</td>
+                                        <td data-label="Remakes">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo vero numquam sapiente.</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="sl">01</td>
+                                        <td data-label="Effective Date">YYYY-MM-DD</td>
+                                        <td data-label="From Branch">Zirabo(001)</td>
+                                        <td data-label="To Branch">Zirani(002)</td>
+                                        <td data-label="Remakes">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo vero numquam sapiente.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
@@ -439,94 +439,69 @@
                         <h4 class="lh-label">Increment History</h4>
                     </div>
 
-                    <!-- employee increment log( each row has 6 cols (100px and 1fr(5times))) -->
+                    <!-- employee increment log( each row has 6 cols) -->
                     <div class="employee-increment-log">
-                        <div class="increment-log-heading">
-                            <div class="log-head">SL</div>
-                            <div class="log-head">Effective Date</div>
-                            <div class="log-head">Designation</div>
-                            <div class="log-head">Basic Salary</div>
-                            <div class="log-head">Gross Salary</div>
-                            <div class="log-head">Increment</div>
-                        </div>
-
-                        <!-- increment log body( each row has 6 cols (100px and 1fr(5times))) -->
-                        <div class="increment-log-body">
-                            <!-- 1st row -->
-                            <div class="log-row">
-                                <div class="log-col employee-increment-sl" data-label="">01</div>
-                                <div class="log-col employee-increment-effective-date" data-label="Increment Effective Date">
-                                    YYYY-MM-DD
-                                </div>
-                                <div class="log-col" data-label="Increment Designation">
-                                    <span class="employee-increment-old-designation">SCO</span> → <span class="employee-increment-new-designation">SCO</span>
-                                </div>
-                                <div class="log-col" data-label="Increment Basic Salary">
-                                    <span style="margin-right: 3px;">৳</span>
-                                    <span class="employee-increment-old-basic-salary">38000</span> → <span style="margin-right: 3px;">৳</span>
-                                    <span class="employee-increment-new-basic-salary">41200</span>
-                                </div>
-                                <div class="log-col" data-label="Increment Gross Salary">
-                                    <span style="margin-right: 3px;">৳</span>
-                                    <span class="employee-increment-old-gross-salary">38000</span> →
-                                    <span style="margin-right: 3px;">৳</span>
-                                    <span class="employee-increment-new-gross-salary">41200</span>
-                                </div>
-                                <div class="log-col" data-label="Increment">
-                                    +<span class="employee-increment-amount">2,500</span>৳
-                                </div>
-                            </div>
-
-                            <!-- 2nd row -->
-                            <div class="log-row">
-                                <div class="log-col employee-increment-sl" data-label="">01</div>
-                                <div class="log-col employee-increment-effective-date" data-label="Increment Effective Date">
-                                    YYYY-MM-DD
-                                </div>
-                                <div class="log-col" data-label="Increment Designation">
-                                    <span class="employee-increment-old-designation">SCO</span> → <span class="employee-increment-new-designation">SCO</span>
-                                </div>
-                                <div class="log-col" data-label="Increment Basic Salary">
-                                    <span style="margin-right: 3px;">৳</span>
-                                    <span class="employee-increment-old-basic-salary">38000</span> → <span style="margin-right: 3px;">৳</span>
-                                    <span class="employee-increment-new-basic-salary">41200</span>
-                                </div>
-                                <div class="log-col" data-label="Increment Gross Salary">
-                                    <span style="margin-right: 3px;">৳</span>
-                                    <span class="employee-increment-old-gross-salary">38000</span> →
-                                    <span style="margin-right: 3px;">৳</span>
-                                    <span class="employee-increment-new-gross-salary">41200</span>
-                                </div>
-                                <div class="log-col" data-label="Increment">
-                                    +<span class="employee-increment-amount">2,500</span>৳
-                                </div>
-                            </div>
-
-                            <!-- 3rd row -->
-                            <div class="log-row">
-                                <div class="log-col employee-increment-sl" data-label="">01</div>
-                                <div class="log-col employee-increment-effective-date" data-label="Increment Effective Date">
-                                    YYYY-MM-DD
-                                </div>
-                                <div class="log-col" data-label="Increment Designation">
-                                    <span class="employee-increment-old-designation">SCO</span> → <span class="employee-increment-new-designation">SCO</span>
-                                </div>
-                                <div class="log-col" data-label="Increment Basic Salary">
-                                    <span style="margin-right: 3px;">৳</span>
-                                    <span class="employee-increment-old-basic-salary">38000</span> → <span style="margin-right: 3px;">৳</span>
-                                    <span class="employee-increment-new-basic-salary">41200</span>
-                                </div>
-                                <div class="log-col" data-label="Increment Gross Salary">
-                                    <span style="margin-right: 3px;">৳</span>
-                                    <span class="employee-increment-old-gross-salary">38000</span> →
-                                    <span style="margin-right: 3px;">৳</span>
-                                    <span class="employee-increment-new-gross-salary">41200</span>
-                                </div>
-                                <div class="log-col" data-label="Increment">
-                                    +<span class="employee-increment-amount">2,500</span>৳
-                                </div>
-                            </div>
-
+                        <div class="table-wrapper">
+                            <table class="table-log">
+                                <thead>
+                                    <tr>
+                                        <th>SL</th>
+                                        <th>Effective Date</th>
+                                        <th>Designation</th>
+                                        <th>Basic Salary</th>
+                                        <th>Gross Salary</th>
+                                        <th>Increment</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="log-col employee-increment-sl" data-label="">01</td>
+                                        <td class="log-col employee-increment-effective-date" data-label="Increment Effective Date">
+                                            YYYY-MM-DD
+                                        </td>
+                                        <td class="log-col" data-label="Increment Designation">
+                                            <span class="employee-increment-old-designation">SCO</span> → <span class="employee-increment-new-designation">SCO</span>
+                                        </td>
+                                        <td class="log-col" data-label="Increment Basic Salary">
+                                            <span style="margin-right: 0px;">৳</span>
+                                            <span class="employee-increment-old-basic-salary">38000</span> → <span style="margin-right: 3px;">৳</span>
+                                            <span class="employee-increment-new-basic-salary">41200</span>
+                                        </td>
+                                        <td class="log-col" data-label="Increment Gross Salary">
+                                            <span style="margin-right: 3px;">৳</span>
+                                            <span class="employee-increment-old-gross-salary">38000</span> →
+                                            <span style="margin-right: 3px;">৳</span>
+                                            <span class="employee-increment-new-gross-salary">41200</span>
+                                        </td>
+                                        <td class="log-col" data-label="Increment">
+                                            +<span class="employee-increment-amount">2,500</span>৳
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="log-col employee-increment-sl" data-label="">01</td>
+                                        <td class="log-col employee-increment-effective-date" data-label="Increment Effective Date">
+                                            YYYY-MM-DD
+                                        </td>
+                                        <td class="log-col" data-label="Increment Designation">
+                                            <span class="employee-increment-old-designation">SCO</span> → <span class="employee-increment-new-designation">SCO</span>
+                                        </td>
+                                        <td class="log-col" data-label="Increment Basic Salary">
+                                            <span style="margin-right: 3px;">৳</span>
+                                            <span class="employee-increment-old-basic-salary">38000</span> → <span style="margin-right: 3px;">৳</span>
+                                            <span class="employee-increment-new-basic-salary">41200</span>
+                                        </td>
+                                        <td class="log-col" data-label="Increment Gross Salary">
+                                            <span style="margin-right: 3px;">৳</span>
+                                            <span class="employee-increment-old-gross-salary">38000</span> →
+                                            <span style="margin-right: 3px;">৳</span>
+                                            <span class="employee-increment-new-gross-salary">41200</span>
+                                        </td>
+                                        <td class="log-col" data-label="Increment">
+                                            +<span class="employee-increment-amount">2,500</span>৳
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
@@ -547,98 +522,71 @@
                         <h4 class="lh-label">Promotion History</h4>
                     </div>
 
-                    <!-- employee promotion log (each row has 7 cols(1fr) -->
+                    <!-- employee promotion log (each row has 7 cols -->
                     <div class="employee-promotion-log">
-                        <div class="promotion-log-heading">
-                            <!-- promotion date  -->
-                            <div class="log-head">Date</div>
-                            <div class="log-head">Designation</div>
-                            <div class="log-head">Salary Grade</div>
-                            <div class="log-head">Increment Amount</div>
-                            <div class="log-head">Basic Salary</div>
-                            <div class="log-head">Gross Salary</div>
-                        </div>
-
-                        <!-- promotion log body (each row has 7 cols(1fr) -->
-                        <div class="promotion-log-body">
-                            <!-- 1st row -->
-                            <div class="log-row">
-                                <div class="log-col employee-promotion-date" data-label="Promotion Date">YYYY-MM-DD</div>
-                                <div class="log-col" data-label="Promotion Designation">
-                                    <span class="employee-promotion-old-designation">SCO</span> → <span class="employee-promotion-new-designation">BM</span>
-                                </div>
-                                <div class="log-col" data-label="Promotion Designation">
-                                    <span class="employee-promotion-old-grade">17</span> → <span class="employee-promotion-new-grade">10</span>
-                                </div>
-                                <div class="log-col" data-label="Promotion Increment Amount">
-                                    +<span class="promotion-increment-amount">2,500</span>৳
-                                </div>
-                                <div class="log-col" data-label="Promotion Basic Salary">
-                                    <span style="margin-right: 3px;">৳</span>
-                                    <span class="promotion-old-gross-salary">38000</span> →
-                                    <span style="margin-right: 3px;">৳</span>
-                                    <span class="promotion-new-gross-salary">41200</span>
-                                </div>
-                                <div class="log-col" data-label="Promotion Gross Salary">
-                                    <span style="margin-right: 3px;">৳</span>
-                                    <span class="promotion-old-gross-salary">38000</span> →
-                                    <span style="margin-right: 3px;">৳</span>
-                                    <span class="promotion-new-gross-salary">41200</span>
-                                </div>
-                            </div>
-
-                            <!-- 2nd row -->
-                            <div class="log-row">
-                                <div class="log-col employee-promotion-date" data-label="Promotion Date">YYYY-MM-DD</div>
-                                <div class="log-col" data-label="Promotion Designation">
-                                    <span class="employee-promotion-old-designation">SCO</span> → <span class="employee-promotion-new-designation">BM</span>
-                                </div>
-                                <div class="log-col" data-label="Promotion Designation">
-                                    <span class="employee-promotion-old-grade">17</span> → <span class="employee-promotion-new-grade">10</span>
-                                </div>
-                                <div class="log-col" data-label="Promotion Increment Amount">
-                                    +<span class="promotion-increment-amount">2,500</span>৳
-                                </div>
-                                <div class="log-col" data-label="Promotion Basic Salary">
-                                    <span style="margin-right: 3px;">৳</span>
-                                    <span class="promotion-old-gross-salary">38000</span> →
-                                    <span style="margin-right: 3px;">৳</span>
-                                    <span class="promotion-new-gross-salary">41200</span>
-                                </div>
-                                <div class="log-col" data-label="Promotion Gross Salary">
-                                    <span style="margin-right: 3px;">৳</span>
-                                    <span class="promotion-old-gross-salary">38000</span> →
-                                    <span style="margin-right: 3px;">৳</span>
-                                    <span class="promotion-new-gross-salary">41200</span>
-                                </div>
-                            </div>
-
-
-                            <!-- 3rd row -->
-                            <div class="log-row">
-                                <div class="log-col employee-promotion-date" data-label="Promotion Date">YYYY-MM-DD</div>
-                                <div class="log-col" data-label="Promotion Designation">
-                                    <span class="employee-promotion-old-designation">SCO</span> → <span class="employee-promotion-new-designation">BM</span>
-                                </div>
-                                <div class="log-col" data-label="Promotion Designation">
-                                    <span class="employee-promotion-old-grade">17</span> → <span class="employee-promotion-new-grade">10</span>
-                                </div>
-                                <div class="log-col" data-label="Promotion Increment Amount">
-                                    +<span class="promotion-increment-amount">2,500</span>৳
-                                </div>
-                                <div class="log-col" data-label="Promotion Basic Salary">
-                                    <span style="margin-right: 3px;">৳</span>
-                                    <span class="promotion-old-gross-salary">38000</span> →
-                                    <span style="margin-right: 3px;">৳</span>
-                                    <span class="promotion-new-gross-salary">41200</span>
-                                </div>
-                                <div class="log-col" data-label="Promotion Gross Salary">
-                                    <span style="margin-right: 3px;">৳</span>
-                                    <span class="promotion-old-gross-salary">38000</span> →
-                                    <span style="margin-right: 3px;">৳</span>
-                                    <span class="promotion-new-gross-salary">41200</span>
-                                </div>
-                            </div>
+                        <div class="table-wrapper">
+                            <table class="table-log">
+                                <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Designation</th>
+                                        <th>Salary Grade</th>
+                                        <th>Increment Amount</th>
+                                        <th>Basic Salary</th>
+                                        <th>Gross Salary</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="log-col employee-promotion-date" data-label="Promotion Date">YYYY-MM-DD</td>
+                                        <td class="log-col" data-label="Promotion Designation">
+                                            <span class="employee-promotion-old-designation">SCO</span> → <span class="employee-promotion-new-designation">BM</span>
+                                        </td>
+                                        <td class="log-col" data-label="Promotion Designation">
+                                            <span class="employee-promotion-old-grade">17</span> → <span class="employee-promotion-new-grade">10</span>
+                                        </td>
+                                        <td class="log-col" data-label="Promotion Increment Amount">
+                                            +<span class="promotion-increment-amount">2,500</span>৳
+                                        </td>
+                                        <td class="log-col" data-label="Promotion Basic Salary">
+                                            <span style="margin-right: 3px;">৳</span>
+                                            <span class="promotion-old-gross-salary">38000</span> →
+                                            <span style="margin-right: 3px;">৳</span>
+                                            <span class="promotion-new-gross-salary">41200</span>
+                                        </td>
+                                        <td class="log-col" data-label="Promotion Gross Salary">
+                                            <span style="margin-right: 3px;">৳</span>
+                                            <span class="promotion-old-gross-salary">38000</span> →
+                                            <span style="margin-right: 3px;">৳</span>
+                                            <span class="promotion-new-gross-salary">41200</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="log-col employee-promotion-date" data-label="Promotion Date">YYYY-MM-DD</td>
+                                        <td class="log-col" data-label="Promotion Designation">
+                                            <span class="employee-promotion-old-designation">SCO</span> → <span class="employee-promotion-new-designation">BM</span>
+                                        </td>
+                                        <td class="log-col" data-label="Promotion Designation">
+                                            <span class="employee-promotion-old-grade">17</span> → <span class="employee-promotion-new-grade">10</span>
+                                        </td>
+                                        <td class="log-col" data-label="Promotion Increment Amount">
+                                            +<span class="promotion-increment-amount">2,500</span>৳
+                                        </td>
+                                        <td class="log-col" data-label="Promotion Basic Salary">
+                                            <span style="margin-right: 3px;">৳</span>
+                                            <span class="promotion-old-gross-salary">38000</span> →
+                                            <span style="margin-right: 3px;">৳</span>
+                                            <span class="promotion-new-gross-salary">41200</span>
+                                        </td>
+                                        <td class="log-col" data-label="Promotion Gross Salary">
+                                            <span style="margin-right: 3px;">৳</span>
+                                            <span class="promotion-old-gross-salary">38000</span> →
+                                            <span style="margin-right: 3px;">৳</span>
+                                            <span class="promotion-new-gross-salary">41200</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
@@ -660,94 +608,70 @@
                         </h4>
                     </div>
 
-                    <!-- Disciplinary Log Heading -->
-                    <div class="discipline-log-heading">
-                        <div class="log-head">SL</div>
-                        <div class="log-head">Notice Date</div>
-                        <div class="log-head">Action Type</div>
-                        <div class="log-head">Details</div>
-                        <div class="log-head">Recommendation</div>
-                        <div class="log-head">Work Station</div>
-                    </div>
+                    <!-- Disciplinary Action log (each row has 6 cols -->
+                    <div class="employee-disciplinary-action-log">
+                        <div class="table-wrapper">
+                            <table class="table-log">
+                                <thead>
+                                    <tr>
+                                        <th>SL</th>
+                                        <th>Notice Date</th>
+                                        <th>Action Type</th>
+                                        <th>Details</th>
+                                        <th>Recommendation</th>
+                                        <th>Work Station</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="log-col discipline-sl" data-label="SL">01</td>
 
-                    <!-- Disciplinary Log Body -->
-                    <div class="discipline-log-body">
+                                        <td class="log-col discipline-notice-date" data-label="Notice Date">
+                                            YYYY-MM-DD
+                                        </td>
 
-                        <!-- 1st Row -->
-                        <div class="log-row">
-                            <div class="log-col discipline-sl" data-label="SL">01</div>
+                                        <td class="log-col discipline-action-type" data-label="Action Type">
+                                            Warning
+                                        </td>
 
-                            <div class="log-col discipline-notice-date" data-label="Notice Date">
-                                YYYY-MM-DD
-                            </div>
+                                        <td class="log-col discipline-action-details" data-label="Details">
+                                            Late attendance and failure to follow office timing regularly.
+                                        </td>
 
-                            <div class="log-col discipline-action-type" data-label="Action Type">
-                                Warning
-                            </div>
+                                        <td class="log-col discipline-recommendation" data-label="Recommendation">
+                                            Maintain punctuality strictly.
+                                        </td>
 
-                            <div class="log-col discipline-action-details" data-label="Details">
-                                Late attendance and failure to follow office timing regularly.
-                            </div>
+                                        <td class="log-col discipline-workstation" data-label="Work Station">
+                                            Zirabo Branch
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="log-col discipline-sl" data-label="SL">01</td>
 
-                            <div class="log-col discipline-recommendation" data-label="Recommendation">
-                                Maintain punctuality strictly.
-                            </div>
+                                        <td class="log-col discipline-notice-date" data-label="Notice Date">
+                                            YYYY-MM-DD
+                                        </td>
 
-                            <div class="log-col discipline-workstation" data-label="Work Station">
-                                Zirabo Branch
-                            </div>
+                                        <td class="log-col discipline-action-type" data-label="Action Type">
+                                            Warning
+                                        </td>
+
+                                        <td class="log-col discipline-action-details" data-label="Details">
+                                            Late attendance and failure to follow office timing regularly.
+                                        </td>
+
+                                        <td class="log-col discipline-recommendation" data-label="Recommendation">
+                                            Maintain punctuality strictly.
+                                        </td>
+
+                                        <td class="log-col discipline-workstation" data-label="Work Station">
+                                            Zirabo Branch
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
-
-                        <!-- 2nd Row -->
-                        <div class="log-row">
-                            <div class="log-col discipline-sl" data-label="SL">02</div>
-
-                            <div class="log-col discipline-notice-date" data-label="Notice Date">
-                                YYYY-MM-DD
-                            </div>
-
-                            <div class="log-col discipline-action-type" data-label="Action Type">
-                                Show Cause
-                            </div>
-
-                            <div class="log-col discipline-action-details" data-label="Details">
-                                Unauthorized leave without prior approval from management.
-                            </div>
-
-                            <div class="log-col discipline-recommendation" data-label="Recommendation">
-                                Submit written explanation within 3 working days.
-                            </div>
-
-                            <div class="log-col discipline-workstation" data-label="Work Station">
-                                Zirani Branch
-                            </div>
-                        </div>
-
-                        <!-- 3rd Row -->
-                        <div class="log-row">
-                            <div class="log-col discipline-sl" data-label="SL">03</div>
-
-                            <div class="log-col discipline-notice-date" data-label="Notice Date">
-                                YYYY-MM-DD
-                            </div>
-
-                            <div class="log-col discipline-action-type" data-label="Action Type">
-                                Suspension
-                            </div>
-
-                            <div class="log-col discipline-action-details" data-label="Details">
-                                Violation of company operational policy and misconduct.
-                            </div>
-
-                            <div class="log-col discipline-recommendation" data-label="Recommendation">
-                                Pending investigation by HR department.
-                            </div>
-
-                            <div class="log-col discipline-workstation" data-label="Work Station">
-                                Head Office
-                            </div>
-                        </div>
-
                     </div>
                 </div>
             </div>
